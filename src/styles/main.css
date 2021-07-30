@@ -1,0 +1,96 @@
+html, body, main {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color:#FFE268;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#navigationDrawer {
+    width: 250px;
+    position: absolute;
+    /* menyembunyikan #navigationDrawer -250px (sesuai dengan ukuran lebar drawer) ke kiri */
+    transform: translate(-250px, 0);
+    transition: transform 0.3s ease-in-out;
+    background-color:#111;
+}
+
+#navigationDrawer.open {
+    transform: translate(0,0)
+}
+
+#navigationDrawer ul {
+    list-style-type: none;
+    padding: 0 16px;
+}
+
+#navigationDrawer li {
+    padding: 5px 0;
+;}
+
+#navigationDrawer a {
+    text-decoration: none;
+    color:  #FFE268;
+    min-width: 44px!important;
+    min-height: 44px!important;
+    line-height: 44px!important;
+    display: inline-block;
+}
+
+#hamburgerButton {
+    font-size: 20px;
+    text-decoration: none;
+    color:  #FFE268;
+    display:block;
+    min-width: 44px;
+    min-height: 44px;
+    line-height: 44px;
+    padding-left: 10px;
+    padding-bottom: 12px;
+}
+
+
+
+div[tabindex="0"]:focus {
+    outline: 4px dashed orange;
+}
+
+img {
+    display: block;
+}
+
+.navy {
+    background-color: hsl(186, 35%, 28%) !important;
+}
+
+.dark-navy{
+    background-color: #364547;
+}
+
+.light-orange{
+    background-color: #FFE268;
+}
+
+.tight-orange{
+    color: #FFB037;
+}
+
+.box{
+    border: red solid 2px;
+}
+
+.text-center{
+    text-align: center;
+}
+

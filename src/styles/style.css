@@ -1,0 +1,381 @@
+div[tabindex="0"]:focus {
+    outline: 4px dashed orange;
+}
+
+.navy {
+    background-color: hsl(186, 35%, 28%) !important;
+}
+
+.dark-navy{
+    background-color: #364547;
+}
+
+.light-orange{
+    background-color: #FFE268;
+}
+
+.tight-orange{
+    color: #FFB037;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+
+* a {
+  min-width: 44px;
+  min-height: 44px;
+  line-height: 44px;
+  display: block;
+}
+
+  body {
+    background-color:#FFE268;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+  /*
+    AppBar
+  */
+
+  .app-bar {
+    padding: 8px 16px;
+    background-color: hsl(186, 35%, 28%);
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .app-bar .app-bar__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .app-bar .app-bar__menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+    color: #FFE268;
+  }
+
+  .app-bar .app-bar__brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .app-bar .app-bar__brand h1 {
+    color:  #FFE268;
+    text-transform: uppercase;
+    font-size: 22px;
+    user-select: none;
+  }
+
+  .app-bar .app-bar__navigation {
+    position: absolute;
+    top: 50px;
+    left: -180px;
+    width: 150px;
+    transition: all 0.3s;
+    padding: 8px;
+    background-color: hsl(186, 35%, 28%);
+    overflow: hidden;
+  }
+
+  .app-bar .app-bar__navigation.open {
+    left: 0;
+  }
+
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color:  #FFE268;
+    padding: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  /*
+    Main Content
+  */
+
+  .wrapper-fr{
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+  }
+
+
+  main {
+    padding: 32px;
+    flex: 1;
+  }
+
+  .content {
+    margin: 0 auto;
+    min-height: 100%;
+  }
+
+  .content .content__heading {
+    font-weight: normal;
+  }
+
+/*
+Hero
+*/
+
+.hero {
+    /* Sizing */
+
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    margin-top: -16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+     /* Text styles */
+     text-align: center;
+
+      /* Background styles */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../public/images/heros/hero-image_4.jpg');
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero h1 {
+    /* Text styles */
+    font-size: 3em;
+    color: #FFE268;
+    /* Margins */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+.hero h2 {
+    /* Text styles */
+    font-size: 1em;
+    color: #FFE268;
+    /* Margins */
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+  /*
+    Restaurants
+  */
+
+  .restaurants {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+
+  /*
+    Resto Item
+  */
+
+  .resto-item {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .resto-item__header {
+    position: relative;
+  }
+
+  .resto-item .resto-item__header .resto-item__header__poster {
+    width: 100%;
+  }
+
+  .resto-item .resto-item__header .resto-item__header__rating {
+    position: absolute;
+    padding: 8px;
+    bottom: 20px;
+    left: 0;
+    display: inline-block;
+    background-color: black;
+    color: white;
+  }
+
+  .resto-item .resto-item__header .resto-item__header__rating .resto-item__header__rating__score {
+    margin-left: 10px;
+  }
+
+  .resto-item .resto-item__content {
+    padding: 16px;
+  }
+
+  .resto-item .resto-item__content h3 {
+    margin: 0 0 10px 0;
+  }
+
+  .resto-item .resto-item__content h3 a {
+    color: #db0000;
+    text-decoration: none;
+  }
+
+  .resto-item .resto-item__content p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+
+  .resto-item .resto-item__header img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+
+  /*
+    Resto
+  */
+
+  .resto {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px 16px;
+  }
+
+  .resto .resto__poster {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .resto .resto__info h4 {
+    margin: 8px 0;
+  }
+
+
+
+  /*
+    Footer
+  */
+
+  footer {
+    padding: 16px;
+  }
+
+  footer p {
+    text-align: center;
+    color: #FFE268;
+  }
+
+  footer p a {
+    color: #db0000;
+    text-decoration: none;
+  }
+
+.skip-link {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    background-color: #bf1722;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+ }
+
+ .skip-link:focus {
+    top: 0;
+ }
+
+ .card{
+    padding: 15px;
+    border: #364547 solid 1px;
+    margin: 5px;
+    border-radius: 10px;
+    color: #364547 ;
+}
+
+.card h2{
+    text-align: center;
+}
+
+.card p{
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.card a:visited{
+    font-size: medium;
+    background: red;
+    color: #364547;
+    text-decoration: none;
+}
+
+.card a:hover{
+    background: #364547;
+    color :#FFE268;
+}
+
+/*
+   Like
+*/
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #db0000;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hamburgerButton {
+  font-size: 20px;
+  text-decoration: none;
+  color:  #FFE268;
+  display:block;
+  min-width: 44px;
+  min-height: 44px;
+  line-height: 44px;
+  padding-left: 10px;
+  padding-bottom: 12px;
+}
+
+#navigationDrawer a {
+  text-decoration: none;
+  color:  #FFE268;
+  min-width: 44px!important;
+  min-height: 44px!important;
+  line-height: 44px!important;
+  display: inline-block;
+}
